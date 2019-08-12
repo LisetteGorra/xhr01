@@ -16,7 +16,14 @@
 
     <script>
     
-    
+        document.getElementById('button').addEventListener("click", loadText);
+
+        function loadText(){
+            var xhr = new XMLHttpRequest;
+            console.log(xhr); //ready state 0
+        }
+
+        
     
     
     
