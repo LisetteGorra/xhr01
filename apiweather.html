@@ -18,11 +18,20 @@
     
         document.getElementById('button').addEventListener("click", loadText);
 
+
         function loadText(){
             var xhr = new XMLHttpRequest;
             console.log(xhr); //ready state 0
         }
-
+        xhr.open('GET', https://api.openweathermap.org/data/2.5/weather?=4201512&APPID=', TRUE'); //Houston County
+        
+        xhr.onload = function(){
+            if(this.status == 200){
+                document.getElementById('text').innerHTML = xhr.responseText;
+            }else{
+                console.log("You Screwed Up Somewhere");
+            }
+        }
     
     
     
